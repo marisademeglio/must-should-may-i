@@ -1,0 +1,23 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+input[type=button] {
+    width: 2rem;
+    height: 2rem;
+    line-height: 1.4rem;
+}
+input[type=text] {
+    width: 80%;
+    font-size: 1.4rem;
+}
+#reset {
+    display: none;
+}
+
+header {
+    background: rgb(255, 255, 199);
+}

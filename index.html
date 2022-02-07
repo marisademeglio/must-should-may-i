@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Must, Should, May I?</title>
+        <link rel="stylesheet" href="table.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <p>Alpha alpha alpha!</p>
+        </header>
+        <main>
+            <h1>Must, Should, May I?</h1>
+            <p>Grab <a href="https://datatracker.ietf.org/doc/html/rfc2119">RFC 2119</a> terms. Right now this works well with publishing specs.</p>
+            <p>See <a href="https://github.com/marisademeglio/must-should-may-i">the github repo</a> for code, caveats, etc.</p>
+
+            <h2>Analyze a spec</h2>
+            <p>Enter the address of a spec, or a spec subsection (e.g. <code>example.org/spec/#sub</code>, and press "go".</p>
+            
+            <label for="url">Spec address</label>
+            <input id="url" name="URL" type="text">
+
+            <input id="submit" type="button" value="Go">
+
+            <p aria-live="polite">Status: <span id="status">Idle</span></p>
+
+            <section>
+                <h2>Results</h2>
+                <button id="copyJson">Copy json</button>    
+                <button id="copyText">Copy text</button>
+                <div id="table-controls" class="table-controls" aria-live="polite"></div>
+                <div role="region" aria-labelledby="table-caption" tabindex="0">
+                    <table id="results-table">
+                        <caption id="table-caption"></caption>
+                        <thead>
+                            <tr>
+                                <th>Level</th>
+                                <th>Context</th>
+                                <th>Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        
+        <script type="module">
+            import { init } from './script.js';
+            init();
+        </script>
+    </body>
+</html>
